@@ -1,0 +1,37 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: $brand-color-secondary;
+  z-index: 3;
+
+  @include media-breakpoint-down(lg) {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: $header-height;
+  }
+
+  @include media-breakpoint-up(lg) {
+    width: 100%;
+    height: $header-lg-height;
+  }
+
+  &__title {
+    margin-bottom: 0;
+    font-weight: 900;
+    line-height: 1.5;
+    color: $white;
+
+    @include media-breakpoint-down(lg) {
+      text-align: center;
+    }
+  }
+
+  .question-topic {
+    @include media-breakpoint-down(lg) {
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+body {
+  font-family: 'Cera Pro', sans-serif;
+}
+
+body,
+.root {
+  overflow: hidden;
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  width: fit-content;
+
+  @include media-breakpoint-down(lg) {
+    max-width: calc(100% - #{$grid-gutter-width * 2} - 10px);
+    margin-bottom: 80px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    max-width: 95%;
+  }
+}

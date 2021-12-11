@@ -1,0 +1,21 @@
+/* For styling I use BEM (Block__Element--Modifier) method.
+   I following the 'Generic First' approach, so first I define all
+   the common css props, then I define the media queries for certain
+   display widths,in order to avoid overwriting.
+
+   Bootstrap 5 is intentionally and generally used for the layout only,
+   hence I avoided to overwrite BS variables generally.
+   As it'd be overhead to import all the variables and set their values,
+   I use custom UI elements app-wide.
+ */
+
+// Dependencies
+
+@import 'node_modules/bootstrap/scss/bootstrap';
+@import '~@fortawesome/fontawesome-svg-core/styles.css';
+
+// App styles: each folder has an 'index' stylesheet with the same name (except 'app.scss')
+
+@import 'app';
+@import 'common/common';
+@import 'components/components';

@@ -1,0 +1,21 @@
+.editable {
+  &__label {
+    width: max-content;
+
+    .matrix__cell--rows & {
+      margin-left: 10px;
+    }
+
+    .matrix__cell--cols & {
+      margin-top: 10px;
+      text-align: center;
+    }
+
+   &:not(.topic__title &) {
+     input {
+       width: fit-content;
+       max-width: 100px;
+     }
+   }
+  }
+}

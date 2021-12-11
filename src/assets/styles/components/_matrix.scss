@@ -1,0 +1,67 @@
+.matrix {
+  &__grid {
+    position: relative;
+    display: grid;
+    min-width: 5%;
+    grid-column-gap: 10px;
+    column-gap: 10px;
+    overflow: auto;
+    scroll-behavior: smooth;
+
+    @include media-breakpoint-down(lg) {
+      max-height: calc(100vh - #{$header-height * 2} - #{$summary-height} - 80px);
+    }
+
+    @include media-breakpoint-up(lg) {
+      max-height: calc(100vh - #{$header-lg-height * 2});
+    }
+
+    scrollbar-width: 5px;
+    scrollbar-color: $gray-300;
+
+    &::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+      padding: 10px;
+      background: $white;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $gray-300;
+      border-left: 1px solid $gray-300;
+    }
+  }
+
+  &__cell {
+    display: flex;
+    align-items: center;
+    animation: fadeIn .3s ease-in-out;
+
+    span {
+      min-width: available;
+    }
+
+    &--rows {
+      left: 0;
+      padding: 15px 0;
+      background-color: #ffffff;
+      z-index: 2;
+    }
+
+    &--cols {
+      position: sticky;
+      top: 0;
+      padding: 0 10px;
+      flex-direction: column;
+      background-color: #ffffff;
+      z-index: 1;
+    }
+
+    &--option {
+      justify-content: center;
+    }
+  }
+}

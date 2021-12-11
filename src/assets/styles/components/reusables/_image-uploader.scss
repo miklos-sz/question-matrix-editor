@@ -1,0 +1,47 @@
+.image-uploader {
+  @include media-breakpoint-down(md) {
+    & ~ span {
+      font-size: 12px;
+    }
+  }
+
+  label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    color: $white;
+    cursor: pointer;
+
+    @include media-breakpoint-down(md) {
+      width: 20px;
+      height: 20px;
+      font-size: 14px;
+    }
+
+    @include media-breakpoint-up(md) {
+      width: 30px;
+      height: 30px;
+      font-size: 22px;
+    }
+
+    &:not(.has-image) {
+      background-color: $brand-color-primary;
+      transition: all .3s ease-out;
+
+      &:hover {
+        background-color: rgba($brand-color-primary, .6);
+        transition: all .3s ease-out;
+      }
+    }
+
+    &.has-image {
+      background-color: $gray-300;
+      transition: all .3s ease-out;
+    }
+  }
+
+  input {
+    display: none;
+  }
+}

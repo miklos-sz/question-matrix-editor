@@ -1,0 +1,24 @@
+.topic {
+  display: flex;
+  align-items: center;
+
+  @include media-breakpoint-down(lg) {
+    height: $header-height;
+    margin-top: $header-height;
+    justify-content: center;
+  }
+
+  @include media-breakpoint-up(lg) {
+    height: $header-lg-height;
+  }
+
+  &__title,
+  &__title input {
+    font-weight: 900;
+    color: $brand-color-primary;
+
+    @include media-breakpoint-down(lg) {
+      text-align: center;
+    }
+  }
+}

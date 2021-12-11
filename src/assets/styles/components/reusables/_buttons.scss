@@ -1,0 +1,92 @@
+.add-dimension {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid $white;
+  border-radius: 50%;
+  font-size: 14px;
+  background-color: $brand-color-primary;
+  color: $white;
+  transition: all .3s ease-in-out;
+
+  @include media-breakpoint-up(lg) {
+    position: absolute;
+  }
+
+  &::after {
+    position: absolute;
+    left: 45px;
+    width: 120px;
+    height: auto;
+    text-align: left;
+    font-size: 16px;
+    opacity: 0;
+    transition: all .3s ease-in-out .2s;
+    pointer-events: none;
+  }
+
+  &:hover {
+    border: 2px solid $brand-color-primary;
+    background-color: $white;
+    color: $brand-color-primary;
+    transition: all .3s ease-in-out;
+
+    &::after {
+      left: 45px;
+      opacity: 1;
+      transition: all .3s ease-in-out;
+    }
+  }
+
+  &--cols {
+    top: 30px;
+    right: -60px;
+
+    @include media-breakpoint-up(lg) {
+      &::after {
+        content: 'Add column';
+      }
+    }
+  }
+
+  &--rows {
+    bottom: -60px;
+    left: 30px;
+
+    &::after {
+      @include media-breakpoint-up(lg) {
+        content: 'Add row';
+      }
+    }
+  }
+}
+
+.remove-dimension {
+  background: none;
+  border: none;
+  color: $danger;
+  cursor: pointer;
+  opacity: 0;
+  transform: scale(0);
+  transition: all .3s ease-in-out;
+  z-index: 2;
+
+  &--cols {
+    margin-bottom: 5px;
+  }
+
+  &--rows {
+    margin-right: 5px;
+  }
+
+  .matrix__cell--cols:hover &,
+  .matrix__cell--rows:hover & {
+    opacity: 0.8;
+    transform: scale(1);
+    transition: all .3s ease-in-out;
+  }
+
+}
