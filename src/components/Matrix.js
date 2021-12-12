@@ -28,9 +28,8 @@ const Matrix = () => {
     <section className='matrix__grid' style={gridStyle}>
       <FirstCell />
       {matrix.cols.map((col, index) => {
-          return <DimensionHeader key={col.id} dimension='cols' item={col} index={index} />
-        })
-      }
+        return <DimensionHeader key={col.id} dimension='cols' item={col} index={index} />
+      })}
       {matrix.rows.map((row, index) => {
         return (
           <React.Fragment key={row.id}>
