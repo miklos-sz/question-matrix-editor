@@ -1,4 +1,4 @@
-[Question Matrix Editor](https://i.imgur.com/6jCIaq5.png)
+![Question Matrix Editor](https://i.imgur.com/6jCIaq5.png)
 # Question Matrix Editor  
 #### by Miklós Szilas 
 [szilas.miklos@gmail.com](mailto:szilas.miklos@gmail.com)
@@ -66,5 +66,5 @@ You have some data displayed here realtime:
 
 #### Preview
 
-[Question Matrix Editor](https://i.imgur.com/8vJc9Ec.gifv)
+![Question Matrix Editor](https://i.imgur.com/8vJc9Ec.gifv)
 
