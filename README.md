@@ -66,5 +66,5 @@ You have some data displayed here realtime:
 
 #### Preview
 
-![Question Matrix Editor](https://i.imgur.com/8vJc9Ec.gifv)
+![Question Matrix Editor](https://i.imgur.com/8vJc9Ec.gif)
 
