@@ -7,7 +7,12 @@ import Editable from './Editable'
 
 const Topic = () => {
   const [matrix, setMatrix] = useContext(MatrixContext)
-  const inputRef = useRef()
+  const inputRef = useRef(null)
+
+  const handleChange = e => {
+    e.preventDefault()
+    setMatrix({ ...matrix, topic: e.target.value })
+  }
 
   return (
     <section className='topic'>
@@ -16,15 +21,13 @@ const Topic = () => {
           text={matrix.topic}
           placeholder={matrix.topic}
           inputRef={inputRef}
-          type='input'
         >
           <input
             ref={inputRef}
-            type='text'
-            name='task'
+            name='topic'
             placeholder={matrix.topic}
             defaultValue={matrix.topic}
-            onChange={e => setMatrix({ ...matrix, topic: e.target.value })}
+            onChange={e => handleChange(e)}
           />
         </Editable>
       </h2>
