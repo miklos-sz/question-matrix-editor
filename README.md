@@ -23,7 +23,7 @@ Run `$ yarn start`.
 The question matrix is a popular tool for getting answers on a certain topic, 
 where rows content the question, and columns content the answers or choices.
 
-There are to major type of matrix questions, such as _single-selection_ (radio buttons) and 
+There are two major type of matrix questions, such as _single-selection_ (radio buttons) and 
 _multiple-selection_ (checkboxes). In this app we can edit and answer questions only by 
 single-selection.
 
