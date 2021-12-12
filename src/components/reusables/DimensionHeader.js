@@ -1,9 +1,9 @@
 import React, { useContext, useRef } from 'react'
 
 import { MatrixContext } from '../../context/MatrixContext'
-import ButtonRemoveDimension from './ButtonRemoveDimension'
 import ImageUploader from './ImageUploader'
 import Editable from './Editable'
+import ButtonAddRemoveDimension from './ButtonAddRemoveDimension'
 
 const DimensionHeader = ({ dimension, item, index }) => {
   const [matrix, setMatrix] = useContext(MatrixContext)
@@ -19,7 +19,7 @@ const DimensionHeader = ({ dimension, item, index }) => {
 
   return (
     <div className={`matrix__cell matrix__cell--${dimension}`}>
-      <ButtonRemoveDimension dimension={dimension} id={item.id} />
+      <ButtonAddRemoveDimension action='remove' dimension={dimension} id={item.id} />
       <ImageUploader dimension={dimension} id={index} />
       <Editable
         text={item.label}
