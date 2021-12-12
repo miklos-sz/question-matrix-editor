@@ -6,7 +6,6 @@ const Editable = (props) => {
   const {
     inputRef,
     text,
-    type,
     placeholder,
     children
   } = props
@@ -17,27 +16,24 @@ const Editable = (props) => {
     }
   }, [isEditing, inputRef])
 
-  const handleKeyDown = (event, type) => {
-    const { key } = event
+  const handleKeyDown = e => {
+    const { key } = e
     const keys = ['Escape', 'Tab']
     const enterKey = 'Enter'
     const allKeys = [...keys, enterKey]
 
-    if (
-      (type === 'textarea' && keys.indexOf(key) > -1) ||
-      (type !== 'textarea' && allKeys.indexOf(key) > -1)
-    ) {
+    if (keys.indexOf(key) > -1 || allKeys.indexOf(key) > -1) {
       setEditing(false)
     }
   }
 
   return (
-    <span {...props}>
+    <span>
       {isEditing
         ? (
           <div
             onBlur={() => setEditing(false)}
-            onKeyDown={e => handleKeyDown(e, type)}
+            onKeyDown={e => handleKeyDown(e)}
             className='editable__label'
           >
             {children}

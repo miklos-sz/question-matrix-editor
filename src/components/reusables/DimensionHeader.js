@@ -7,14 +7,14 @@ import ButtonAddRemoveDimension from './ButtonAddRemoveDimension'
 
 const DimensionHeader = ({ dimension, item, index }) => {
   const [matrix, setMatrix] = useContext(MatrixContext)
-  const inputRef = useRef()
+  const inputRef = useRef(null)
 
   // Sets the changed label for current row/col header0
 
   const handleChange = e => {
     e.preventDefault()
-    matrix[dimension][index].label = e.target.value
-    setMatrix({ ...matrix })
+    const newLabelText = matrix[dimension][index].label = e.target.value
+    setMatrix({ ...matrix, newLabelText})
   }
 
   return (
@@ -25,12 +25,10 @@ const DimensionHeader = ({ dimension, item, index }) => {
         text={item.label}
         placeholder={item.label}
         inputRef={inputRef}
-        type='input'
       >
         <input
           ref={inputRef}
-          type='text'
-          name='task'
+          name='dimensionHeader'
           placeholder={item.label}
           defaultValue={item.label}
           onChange={e => handleChange(e)}
