@@ -31,11 +31,9 @@ single-selection.
 
 #### 1. General features
 - ✅ Question topic is editable
-- ✅ Question topic is editable
 - ✅ Responsive design (works fine on mobile)
 - ✅ Subtle animations
 - ✅ Straightforward UI
-- ✅ Consistent styling
 - ✅ Favicon ✨
 
 #### 2. Question Editor
